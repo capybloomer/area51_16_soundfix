@@ -194,7 +194,7 @@ else
     sudo chmod +x "$SCRIPT_DIR/enable-sound-switches.sh"
 
     if [ -f "$SCRIPT_DIR/sound-switches.service" ]; then
-        sed "s|/home/capy/Sound|$SCRIPT_DIR|g" "$SCRIPT_DIR/sound-switches.service" | sudo tee /etc/systemd/system/sound-switches.service > /dev/null
+        sed "s|/home/"$USER/Sound|$SCRIPT_DIR|g" "$SCRIPT_DIR/sound-switches.service" | sudo tee /etc/systemd/system/sound-switches.service > /dev/null
 
         sudo systemctl daemon-reload
         sudo systemctl enable sound-switches.service
