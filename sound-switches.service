@@ -1,0 +1,12 @@
+[Unit]
+Description=Enable RT1320 Speaker Hardware Switches
+After=sound.target alsa-restore.service
+Wants=sound.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/capy/Sound/enable-sound-switches.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
