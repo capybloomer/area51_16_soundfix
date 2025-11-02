@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script ensures all the hardware switches are enabled for sound to work
+# This script ensures all the hardware switches are enabled for sound to work for sof-soundwire
 
 sleep 2
 
